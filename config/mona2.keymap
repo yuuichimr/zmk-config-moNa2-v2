@@ -180,10 +180,10 @@
 
         layer_3 {
             bindings = <
-&trans  &kp LC(LS(TAB))    &kp PRINTSCREEN   &kp LC(TAB)        &trans                                              &trans            &kp LC(LS(TAB))     &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
-&trans  &kp LG(LS(RIGHT))  &kp LG(LA(LEFT))  &kp LC(LA(RIGHT))  &kp LC(LA(RIGHT_ARROW))            &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
-&trans  &kp LEFT_SHIFT     &kp LA(LC(D))     &kp LC(LA(T))      &kp LA(LC(F))            &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kp LC(DOWN)   &trans
-&trans  &trans             &trans            &trans             &trans                   &trans    &trans           &trans                                                              &kp LS(LG(O))
+&kp LA(LG(PIPE))  &kp LS(LG(LEFT))   &kp PRINTSCREEN   &kp LC(TAB)        &kp LA(LC(ENTER))                             &trans            &kp LC(LS(TAB))     &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
+&trans            &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))  &kp LC(LA(RIGHT))  &kp LC(LA(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
+&trans            &kp LEFT_SHIFT     &kp LA(LC(D))     &kp LC(LA(T))      &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kp LC(DOWN)   &trans
+&trans            &trans             &trans            &trans             &trans             &trans    &trans           &trans                                                              &kp LS(LG(O))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
