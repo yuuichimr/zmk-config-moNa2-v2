@@ -113,6 +113,13 @@
             bindings = <&kp C &kp M &kp D &kp PLUS &kp S &kp H &kp I &kp F &kp T &kp PLUS &kp C &kp T &kp R &kp L &kp PLUS>;
             label = "CMD_SHIFT_CTRL";
         };
+
+        cmd_shift_ctrl__: cmd_shift_ctrl__ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp LEFT_CONTROL>;
+            label = "CMD_SHIFT_CTRL__";
+        };
     };
 
     behaviors {
