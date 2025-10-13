@@ -110,7 +110,7 @@
         cmd_shift_ctrl: cmd_shift_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp M &kp D &kp PLUS &kp S &kp H &kp I &kp F &kp T &kp PLUS &kp C &kp T &kp R &kp L &kp PLUS>;
+            bindings = <&kp C &kp M &kp D &kp UNDERSCORE &kp S &kp H &kp I &kp F &kp T &kp UNDERSCORE &kp A &kp L &kp T &kp UNDERSCORE>;
             label = "CMD_SHIFT_CTRL";
         };
 
