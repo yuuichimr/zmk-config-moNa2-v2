@@ -127,6 +127,13 @@
             bindings = <&kp LS(LG(LA(A)))>;
             label = "LOUPEDECK";
         };
+
+        keymap_open: keymap_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(L) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp N &kp I &kp C &kp K &kp C &kp O &kp U &kp T &kp S &kp O &kp S &kp DOT &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp I &kp O &kp FSLH &kp K &kp E &kp Y &kp M &kp A &kp P &kp MINUS &kp E &kp D &kp I &kp T &kp O &kp R &kp FSLH &kp ENTER>;
+            label = "KEYMAP_OPEN";
+        };
     };
 
     behaviors {
@@ -194,10 +201,10 @@
 
         layer_3 {
             bindings = <
-&kp LA(LG(I))  &kp LS(LG(LEFT))   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LA(LC(ENTER))                             &kp LG(Q)         &kp LC(LS(TAB))     &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
-&trans         &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))      &kp LC(LA(RIGHT))      &kp LC(LA(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
-&trans         &kp LEFT_SHIFT     &kp LA(LC(D))         &kp LC(LA(T))          &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kp LC(DOWN)   &kp PAGE_DOWN
-&kp LG(Z)      &kp LS(LG(Z))      &trans                &trans                 &trans             &trans    &trans           &trans                                                              &kp PAGE_DOWN
+&kp LA(LG(I))       &kp LS(LG(LEFT))   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LA(LC(ENTER))                             &kp LG(Q)         &kp LC(LS(TAB))     &kp LC(TAB)    &kp LG(MINUS)  &kp LG(PLUS)
+&kp LS(LG(PERIOD))  &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))      &kp LC(LA(RIGHT))      &kp LC(LA(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)      &kp LG(V)      &kp LS(LG(T))
+&trans              &kp LEFT_SHIFT     &kp LA(LC(D))         &kp LC(LA(T))          &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kp LC(DOWN)   &kp PAGE_UP
+&kp LG(Z)           &kp LS(LG(Z))      &trans                &trans                 &trans             &trans    &keymap_open     &trans                                                              &kp PAGE_DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -205,10 +212,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans            &trans       &loupedeck    &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans         &trans         &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &kp LS(LG(D))  &kp LA(LG(L))  &trans            &trans       &loupedeck    &trans        &trans        &trans        &trans
+&trans  &trans  &trans         &trans         &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans         &trans         &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
