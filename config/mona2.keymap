@@ -230,10 +230,10 @@
 
         ipad_layer1 {
             bindings = <
-&trans  &trans    &trans    &trans    &trans                         &trans  &trans    &trans    &trans    &trans
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                 &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans    &trans    &trans    &trans       &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans    &trans    &trans    &lt 6 SPACE  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans         &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 7 LANG1    &trans  &lt 6 ENTER                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -241,10 +241,10 @@
 
         ipad_layer2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mac_bt_layer    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                                   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                   &win2_bt_layer  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mac_bt_layer    &win_bt_layer   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -259,12 +259,21 @@
             >;
         };
 
+        win_layer_0 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                         &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                 &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans               &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &lt 9 LANGUAGE_1  &lt 11 LANGUAGE_1    &trans  &lt 10 ENTER                          &trans
+            >;
+        };
+
         win_layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&aimemo            &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                                        &kp CARET      &kp LA(UP_ARROW)  &kp LA(DOWN)          &trans    &kp PLUS
+&kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                    &win2_bt_layer  &kp LA(LEFT)   &mkp MB1          &kp LS(LC(UP_ARROW))  &mkp MB2  &trans
+&kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &iapd_bt_layer    &mac_bt_layer   &kp LA(RIGHT)  &kp EQUAL         &kp LA(LC(DOWN))      &mkp MB3  &kp LESS_THAN
+&kp DOLLAR         &trans                 &trans                &trans                 &trans        &trans            &trans          &trans                                                           &kp GREATER_THAN
             >;
         };
 
@@ -278,15 +287,6 @@
         };
 
         win_layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
-        layer_11 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
