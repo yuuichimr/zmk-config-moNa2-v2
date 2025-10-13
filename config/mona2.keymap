@@ -134,6 +134,13 @@
             bindings = <&kp LG(L) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp N &kp I &kp C &kp K &kp C &kp O &kp U &kp T &kp S &kp O &kp S &kp DOT &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp I &kp O &kp FSLH &kp K &kp E &kp Y &kp M &kp A &kp P &kp MINUS &kp E &kp D &kp I &kp T &kp O &kp R &kp FSLH &kp ENTER>;
             label = "KEYMAP_OPEN";
         };
+
+        Googlechroom_open: Googlechroom_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LG(C)))>;
+            label = "GOOGLECHROOM_OPEN";
+        };
     };
 
     behaviors {
@@ -212,10 +219,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans             &trans         &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &trans            &trans       &loupedeck    &trans        &trans        &trans        &trans
-&trans  &trans  &trans             &trans         &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans             &trans         &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans             &trans         &trans                         &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &trans            &trans       &loupedeck    &Googlechroom_open  &trans        &trans        &trans
+&trans  &trans  &trans             &trans         &trans  &trans    &bootloader  &trans        &trans              &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans             &trans         &trans  &trans    &trans       &trans                                                        &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
