@@ -141,6 +141,20 @@
             bindings = <&kp LS(LA(LG(C)))>;
             label = "GOOGLECHROOM_OPEN";
         };
+
+        obsidian_open: obsidian_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LG(O)))>;
+            label = "OBSIDIAN_OPEN";
+        };
+
+        cco_foruda_open: cco_foruda_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LG(H)))>;
+            label = "CCO_FORUDA_OPEN";
+        };
     };
 
     behaviors {
@@ -219,10 +233,10 @@
 
         layer_4 {
             bindings = <
-&kp F1  &kp F2  &kp F3             &kp F4         &kp F5                         &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &trans            &trans       &loupedeck    &Googlechroom_open  &trans        &trans        &trans
-&trans  &trans  &trans             &trans         &trans  &trans    &bootloader  &trans        &trans              &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans             &trans         &trans  &trans    &trans       &trans                                                        &bt BT_CLR_ALL
+&kp F1  &kp F2  &kp F3             &kp F4         &kp F5                                   &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &cco_foruda_open            &trans       &loupedeck    &Googlechroom_open  &obsidian_open  &trans        &trans
+&trans  &trans  &trans             &trans         &trans            &trans    &bootloader  &trans        &trans              &trans          &trans        &bt BT_CLR
+&trans  &trans  &trans             &trans         &trans            &trans    &trans       &trans                                                          &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
