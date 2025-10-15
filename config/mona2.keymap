@@ -121,10 +121,10 @@
             label = "CMD_SHIFT_CTRL__";
         };
 
-        loupedeck: loupedeck {
+        loupedeck_open: loupedeck {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LA(A)))>;
+            bindings = <&kp LS(LG(LA(L)))>;
             label = "LOUPEDECK";
         };
 
@@ -255,10 +255,10 @@
 
         layer_4 {
             bindings = <
-&kp F1                     &kp F2                  &kp F3             &kp F4         &kp F5                                   &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
-&zmk_git_url_open          &trans                  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &cco_foruda_open            &trans       &loupedeck    &Googlechroom_open  &obsidian_open  &trans        &trans
-&trans                     &trans                  &new_d_folder      &trans         &trans            &trans    &bootloader  &trans        &trans              &trans          &trans        &bt BT_CLR
-&System_keyboard_shortcut  &System_Bluetooth_open  &trans             &trans         &trans            &trans    &trans       &trans                                                          &bt BT_CLR_ALL
+&kp F1                     &kp F2                  &kp F3             &kp F4         &kp F5                                   &bt BT_SEL 0     &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
+&zmk_git_url_open          &trans                  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &cco_foruda_open            &trans       &loupedeck_open  &Googlechroom_open  &obsidian_open  &trans        &trans
+&trans                     &trans                  &new_d_folder      &trans         &trans            &trans    &bootloader  &trans           &trans              &trans          &trans        &bt BT_CLR
+&System_keyboard_shortcut  &System_Bluetooth_open  &trans             &trans         &trans            &trans    &trans       &trans                                                             &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
