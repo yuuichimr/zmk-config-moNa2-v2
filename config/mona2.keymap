@@ -177,6 +177,13 @@
             bindings = <&kp LS(LA(LG(E)))>;
             label = "SYSTEM_BLUETOOTH_OPEN";
         };
+
+        vscode_open: vscode_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LG(F)))>;
+            label = "VSCODE_OPEN";
+        };
     };
 
     behaviors {
@@ -214,7 +221,7 @@
 &kp Q      &kp W         &kp E             &kp R                      &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D             &kp F                      &kp G                            &kp TAB        &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z      &kp X         &kp C             &kp V                      &kp B        &kp F14             &kp LS(TAB)    &kp N        &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &cmd_shift_ctrl
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &kp LEFT_GUI
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -256,7 +263,7 @@
         layer_4 {
             bindings = <
 &kp F1                     &kp F2                  &kp F3             &kp F4         &kp F5                                   &bt BT_SEL 0     &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
-&zmk_git_url_open          &trans                  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &cco_foruda_open            &trans       &loupedeck_open  &Googlechroom_open  &obsidian_open  &trans        &trans
+&zmk_git_url_open          &trans                  &kp LS(LG(LA(D)))  &kp LA(LG(L))  &cco_foruda_open            &trans       &loupedeck_open  &Googlechroom_open  &obsidian_open  &trans        &vscode_open
 &trans                     &trans                  &new_d_folder      &trans         &trans            &trans    &bootloader  &trans           &trans              &trans          &trans        &bt BT_CLR
 &System_keyboard_shortcut  &System_Bluetooth_open  &trans             &trans         &trans            &trans    &trans       &trans                                                             &bt BT_CLR_ALL
             >;
@@ -264,18 +271,18 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        ipad_layer1 {
+        ipad_layer_0 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans         &trans  &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 7 LANG1    &trans  &lt 6 ENTER                          &trans
+&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 7 LANG1    &trans  &lt 7 ENTER                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        ipad_layer2 {
+        ipad_layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                   &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                   &win2_bt_layer  &trans  &trans  &trans  &trans  &trans
@@ -286,7 +293,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        ipad_layer3 {
+        ipad_layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
