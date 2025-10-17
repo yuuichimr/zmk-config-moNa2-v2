@@ -311,11 +311,13 @@
 
         ipad_layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kp LA(LG(I))       &kp LS(LG(LEFT))   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LA(LC(ENTER))                             &kp LG(Q)         &kp LC(LS(TAB))     &kp LC(TAB)         &kp LG(MINUS)  &kp LG(PLUS)
+&kp LS(LG(PERIOD))  &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))      &kp LC(LA(RIGHT))      &kp LC(LA(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)          &kp LG(V)      &kp LS(LG(T))
+&trans              &kp LEFT_SHIFT     &kp LA(LC(D))         &kp LC(LA(T))          &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &kp LC(DOWN)   &kp PAGE_UP
+&kp LG(Z)           &kp LS(LG(Z))      &trans                &trans                 &trans             &trans    &kp BACKSPACE    &trans                                                                      &kp PAGE_DOWN
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         win_layer_0 {
