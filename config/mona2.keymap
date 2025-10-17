@@ -227,7 +227,7 @@
             bindings = <
 &kp Q      &kp W         &kp E             &kp R                      &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D             &kp F                      &kp G                            &kp TAB        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C             &kp V                      &kp B        &kp F14             &kp LS(TAB)    &kp N        &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
+&kp Z      &kp X         &kp C             &kp V                      &kp B        &mkp MB1            &kp LS(TAB)    &kp N        &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &kp LEFT_GUI
             >;
 
@@ -283,7 +283,7 @@
 &trans  &trans  &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans         &trans  &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 8 LANG1    &trans  &lt 7 ENTER                          &trans
+&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 8 LANG1    &trans  &lt 7 ENTER                          &kp LG(H)
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -311,10 +311,10 @@
 
         ipad_layer_3 {
             bindings = <
-&kp LA(LG(I))       &kp LS(LG(LEFT))   &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LA(LC(ENTER))                             &kp LG(Q)         &kp LC(LS(TAB))     &kp LC(TAB)         &kp LG(MINUS)  &kp LG(PLUS)
-&kp LS(LG(PERIOD))  &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))      &kp LC(LA(RIGHT))      &kp LC(LA(G))                &kp LG(LA(ESC))  &kp LC(UP_ARROW)  &kp LG(A)           &kp LG(C)          &kp LG(V)      &kp LS(LG(T))
-&trans              &kp LEFT_SHIFT     &kp LA(LC(D))         &kp LC(LA(T))          &kp LA(LC(F))      &trans    &kp LG(O)        &kp LG(UP_ARROW)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &kp LC(DOWN)   &kp PAGE_UP
-&kp LG(Z)           &kp LS(LG(Z))      &trans                &trans                 &trans             &trans    &kp BACKSPACE    &trans                                                                      &kp PAGE_DOWN
+&kp LA(LG(I))       &trans             &trans            &trans             &trans                                    &kp LG(Q)      &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(MINUS)  &kp LG(PLUS)
+&kp LS(LG(PERIOD))  &kp LG(LS(RIGHT))  &kp LA(LC(LEFT))  &kp LC(LA(RIGHT))  &kp LC(LA(G))            &kp LG(LA(ESC))  &kp LG(SPACE)  &kp LG(A)        &kp LG(C)    &kp LG(V)      &kp LS(LG(T))
+&trans              &kp LEFT_SHIFT     &kp LA(LC(D))     &kp LC(LA(T))      &kp LA(LC(F))  &trans    &kp LG(O)        &kp LG(T)      &kp LG(R)        &kp LG(L)    &kp LC(DOWN)   &kp PAGE_UP
+&kp LG(Z)           &kp LS(LG(Z))      &trans            &trans             &trans         &trans    &kp BACKSPACE    &trans                                                      &kp PAGE_DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
