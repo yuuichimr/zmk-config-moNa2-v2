@@ -82,7 +82,7 @@
         win_bt_layer: win_bt_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&macro_wait_time 200>, <&to 8>;
+            bindings = <&bt BT_SEL 2>, <&macro_wait_time 200>, <&to 9>;
 
             label = "WIN_BT_LAYER";
         };
@@ -90,7 +90,7 @@
         win2_bt_layer: win2_bt_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&macro_wait_time 200>, <&to 8>;
+            bindings = <&bt BT_SEL 3>, <&macro_wait_time 200>, <&to 9>;
 
             label = "WIN2_BT_LAYER";
         };
@@ -250,7 +250,7 @@
 &kp EXCLAMATION  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                 &kp NON_US_BACKSLASH  &kp PERCENT     &mkp MB3        &kp LG(UP_ARROW)  &kp LG(DOWN)
 &kp SQT          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS                          &kp LS(LG(NUMBER_3))  &kp SEMICOLON         &mkp MB1        &kp UP_ARROW    &mkp MB2          &kp COLON
 &kp GRAVE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp LS(LG(NUMBER_5))    &kp LS(LG(NUMBER_4))  &kp PIPE              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp UNDER
-&kp ESC          &kp KP_NUMBER_0  &trans           &kp DELETE       &kp ENTER  &kp BACKSPACE           &trans                &trans                                                                  &cmd_shift_ctrl
+&kp ESC          &kp KP_NUMBER_0  &trans           &kp DELETE       &kp TILDE  &kp BACKSPACE           &trans                &trans                                                                  &cmd_shift_ctrl
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -283,7 +283,7 @@
 &trans  &trans  &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans         &trans  &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 7 LANG1    &trans  &lt 7 ENTER                          &trans
+&trans  &trans  &trans  &trans  &lt 6 SPACE  &lt 8 LANG1    &trans  &lt 7 ENTER                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -291,10 +291,10 @@
 
         ipad_layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                   &win2_bt_layer  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mac_bt_layer    &win_bt_layer   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans                          &trans
+&trans             &kp LA(RIGHT_BRACKET)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                                       &kp LCTRL            &kp LA(UP)  &kp LA(UP_ARROW)  &trans    &trans
+&kp SPACE          &kp EXCLAMATION        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK                   &win2_bt_layer  &kp LA(LEFT)         &mkp MB1    &kp LS(LA(UP))    &mkp MB2  &kp LS(GRAVE)
+&kp DOUBLE_QUOTES  &kp AMPERSAND          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN   &mac_bt_layer    &win_bt_layer   &kp LA(RIGHT_ARROW)  &kp EQUAL   &kp LS(LA(DOWN))  &mkp MB3  &kp LESS_THAN
+&kp DOLLAR         &trans                 &trans                &trans                 &trans        &trans           &trans          &trans                                                       &kp GREATER_THAN
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -309,12 +309,21 @@
             >;
         };
 
+        ipad_layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
         win_layer_0 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                         &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                 &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans               &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 9 LANGUAGE_1  &lt 11 LANGUAGE_1    &trans  &lt 10 ENTER                          &trans
+&trans  &trans  &trans  &trans  &trans                                          &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                  &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans               &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &lt 10 LANGUAGE_1  &lt 12 LANGUAGE_1    &trans  &lt 11 ENTER                          &trans
             >;
         };
 
