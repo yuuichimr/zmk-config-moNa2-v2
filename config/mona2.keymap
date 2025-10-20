@@ -349,10 +349,10 @@
 
         win_layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans     &trans         &trans        &trans         &trans                    &trans       &kp LS(LC(TAB))   &kp LS(TAB)        &kp LC(MINUS)  &kp LC(PLUS)
+&trans     &trans         &kp LG(LEFT)  &kp LG(RIGHT)  &trans            &trans  &kp LG(TAB)  &kp LC(A)         &kp LC(C)          &kp LC(V)      &kp LS(LC(T))
+&trans     &trans         &trans        &trans         &trans  &trans    &trans  &trans       &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans         &kp PAGE_UP
+&kp LC(Z)  &kp LS(LC(Z))  &trans        &trans         &trans  &trans    &trans  &trans                                                           &kp PAGE_DOWN
             >;
         };
     };
