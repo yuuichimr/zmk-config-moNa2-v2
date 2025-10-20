@@ -322,10 +322,10 @@
 
         win_layer_0 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                          &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans               &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &lt 10 LANGUAGE_1  &lt 12 LANGUAGE_1    &trans  &lt 11 ENTER                          &trans
+&trans     &trans  &trans        &trans                &trans                                            &trans        &trans  &trans  &trans  &trans
+&trans     &trans  &trans        &trans                &trans                             &trans         &trans        &trans  &trans  &trans  &trans
+&trans     &trans  &trans        &trans                &trans        &trans               &trans         &trans        &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &lt 10 SPACE  &lt 12 LANGUAGE_1    &kp BACKSPACE  &lt 11 ENTER                          &kp LCTRL
             >;
         };
 
